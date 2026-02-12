@@ -6,19 +6,15 @@ contentDir = "content/english"
 weight = 1
 [en.params]
 home = "Home"
-copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
-
-
 
 ################################### French language #####################################
-[fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
+[pt]
+languageName = "Pt"
+languageCode = "pt-pt"
+contentDir = "content/portuguese"
 weight = 2
-[fr.params]
-home = "Accueil"
-copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
+[pt.params]
+home = "Home"
 
 
 

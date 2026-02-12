@@ -1,27 +1,27 @@
 
-################### French Navigation ########################
+################### Portuguese Navigation ########################
 [[main]]
-name = "sur"
+name = "sobre"
 url = "#about"
 weight = 1
 
 [[main]]
-name = "un service"
+name = "serviço"
 url = "#services"
 weight = 2
 
 [[main]]
-name = "portefeuille"
+name = "portfólio"
 url = "#portfolio"
 weight = 3
 
 [[main]]
-name = "équipe"
+name = "equipe"
 url = "#team"
 weight = 4
 
 [[main]]
-name = "tarification"
+name = "preços"
 url = "#pricing"
 weight = 5
 
@@ -31,11 +31,6 @@ url = "#blog"
 weight = 6
 
 [[main]]
-name = "contact"
+name = "contato"
 url = "#contact"
 weight = 7
-
-[[main]]
-name = "themefisher"
-url = "https://themefisher.com/"
-weight = 8

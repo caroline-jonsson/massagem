@@ -53,8 +53,3 @@ name = "Dropdown 2"
 url = "#"
 weight = 2
 
-[[main]]
-name = "themefisher"
-url = "https://themefisher.com/"
-weight = 8
-
