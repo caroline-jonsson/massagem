@@ -1,8 +1,8 @@
 ################################# Default configuration ###################
-baseURL = "/"
-title = "Meghna"
+baseURL = "https://caroline-jonsson.github.io/massagem"
+title = "Caroline massagem"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
-timeZone = "America/New_York"
+timeZone = "Europe/Lisbon"
 # post pagination
 pagerSize = 6 # see https://gohugo.io/extras/pagination/
 # post excerpt
