@@ -12,6 +12,11 @@ permissions:
   pages: write
   id-token: write
 
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
 # Environment variables available to all jobs and steps in this workflow
 env:
   HUGO_ENV: production
@@ -20,45 +25,78 @@ env:
   NODE_VERSION: "18.15.0"
   TINA_CLIENT_ID: ${{ vars.TINA_CLIENT_ID }}
   TINA_TOKEN: ${{ vars.TINA_TOKEN }}
+  TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
 
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4.2.2
         with:
-          node-version: ${{ env.NODE_VERSION }}
-
+          submodules: recursive
+          fetch-depth: 0
+      
+      - name: Cache Hugo binary
+        uses: actions/cache@v4
+        with:
+          path: ~/hugo-cache
+          key: ${{ runner.os }}-hugo-${{ env.HUGO_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-
+      
       - name: Install Hugo
         run: |
-          curl -LO "https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_Linux-64bit.tar.gz"
-          tar -xvf hugo_extended_${{ env.HUGO_VERSION }}_Linux-64bit.tar.gz
-          sudo mv hugo /usr/local/bin/
-          rm hugo_extended_${{ env.HUGO_VERSION }}_Linux-64bit.tar.gz
-          hugo version
+          mkdir -p ~/hugo-cache
+          if [ ! -f ~/hugo-cache/hugo.deb ]; then
+            wget -O ~/hugo-cache/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-arm64.deb
+          fi
+          sudo dpkg -i ~/hugo-cache/hugo.deb
+      
+      - name: Cache Go binary
+        uses: actions/cache@v4
+        with:
+          path: ~/go-cache
+          key: ${{ runner.os }}-go-${{ env.GO_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-go-
 
       - name: Install Go
         run: |
-          curl -LO "https://dl.google.com/go/go${{ env.GO_VERSION }}.linux-amd64.tar.gz"
-          sudo tar -C /usr/local -xzf go${{ env.GO_VERSION }}.linux-amd64.tar.gz
-          echo "export PATH=$PATH:/usr/local/go/bin" >> $GITHUB_ENV
-          rm go${{ env.GO_VERSION }}.linux-amd64.tar.gz
-          go version
+          mkdir -p ~/go-cache
+          if [ ! -f ~/go-cache/go.tar.gz ]; then
+            wget -O ~/go-cache/go.tar.gz https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
+          fi
+          sudo tar -C /usr/local -xzf ~/go-cache/go.tar.gz
 
-      - name: Setup Project
-        run: npm run project-setup
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
 
       - name: Install npm dependencies
         run: npm install
 
-      - name: Publish to GitHub Pages
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        with:
+          path: resources/_gen
+          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-resources-
+
+      - name: Build site
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: ./public
 
@@ -67,9 +105,10 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4.0.5
+
