@@ -1,16 +1,29 @@
 ############################# About ###################################
 about:
-  enable : true
-  title : About Us
-  about_item :
-  - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : We're Creative
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+  enable: true
+  title: My Principles
+  about_item:
+    - icon: ""
+      title: Respect
+      content: "Receiving a massage from an unknown person is a vulnerable situation
+        where one can feel nervous and exposed. As a massage therapist I am
+        aware of this and will do my absolute best to make you feel comfortable
+        and relaxed so that you can get the most out of the treatment. I will
+        always respect your boundaries and privacy. To me, hygiene and
+        cleanliness is also a matter of respect and ethics: towels are always
+        washed, the massage bed disinfected and my hands clean."
+    - icon: ""
+      title: Professionalism
+      content: To me being professional is knowing what I can do, but also knowing
+        when not to massage or what I cannot treat. The combination of
+        theoretical knowledge about the body, practical knowledge from
+        experience and curiosity in your specific unique body is the basis of
+        all massages and treatments I do. And presence, always presence.
+    - icon: ""
+      title: Sensitivity
+      content: Especially for people who themselves have training and knowledge about
+        the body and treatment, or a lot of experience receiving massages, it
+        can be very challenging to find someone who can do what they wish for. I
+        know from experience and therefore try to be extra sensitive and
+        receptive to those needs.
 
-  - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : We're Professional
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
-
-  - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : We're Genius
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
