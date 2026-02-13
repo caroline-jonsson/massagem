@@ -1,8 +1,8 @@
 ############################# feature ###################################
 feature:
   enable: true
-  image: /images/IMG_0849.jpeg
-  image_webp: /images/IMG_0849.jpeg
+  image: /images/about/Massa_blur.webp
+  image_webp: /images/about/Massa_blur.webp
   title: The Benefits of Massage
   content: The most common feedback I get is clients discovering their body
     through the massage. Sometimes we feel tension or pain in one part of the
@@ -15,7 +15,7 @@ feature:
       content: Helps muscles to recover and relax after exercise.
     - title: Relaxation
       icon: ti-panel
-      content: Helps the body to relax through oxytocin release.
+      content: Helps the body to relax and reduce stress through oxytocin release.
     - title: Blood Circulation
       icon: ti-stats-up
       content: Helps to improve blood circulation.
