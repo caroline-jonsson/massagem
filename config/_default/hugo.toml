@@ -93,7 +93,7 @@ link = "plugins/google-map/map.js"
 
 ############################# Default Parameters ##########################
 [params]
-logo = "/images/6-cropped.svg"
+logo = "/images/6 cropped50.webp"
 # Meta data
 description = "Responsive Multipurpose Parallax Hugo Template"
 author = "Themefisher"
@@ -123,27 +123,27 @@ map_marker = "images/marker.png"
 ############################# social icons ##########################
 [[params.social]]
 icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #" #"
+link = "#" #" #" #" #"
 
 [[params.social]]
 icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #" #"
+link = "#" #" #" #" #"
 
 [[params.social]]
 icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #" #"
+link = "#" #" #" #" #"
 
 [[params.social]]
 icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #"
+link = "#" #" #" #"
 
 [[params.social]]
 icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #"
+link = "#" #" #" #"
 
 [[params.social]]
 icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #"
+link = "#" #" #" #"
 
 
 ################################ English Language ########################
