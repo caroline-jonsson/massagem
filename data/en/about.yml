@@ -3,7 +3,14 @@ about:
   enable: true
   title: My Principles
   about_item:
-    - icon: ""
+    - icon: ti-star
+      title: Professionalism
+      content: To me being professional is knowing what I can do, but also knowing
+        when not to massage or what I can't treat. The combination of
+        theoretical knowledge about the body, practical knowledge from
+        experience and curiosity in your specific unique body is the basis of
+        all massages and treatments I do. And presence, always presence.
+    - icon: ti-heart
       title: Respect
       content: "Receiving a massage from an unknown person is a vulnerable situation
         where one can feel nervous and exposed. As a massage therapist I am
@@ -12,14 +19,7 @@ about:
         always respect your boundaries and privacy. To me, hygiene and
         cleanliness is also a matter of respect and ethics: towels are always
         washed, the massage bed disinfected and my hands clean."
-    - icon: ""
-      title: Professionalism
-      content: To me being professional is knowing what I can do, but also knowing
-        when not to massage or what I cannot treat. The combination of
-        theoretical knowledge about the body, practical knowledge from
-        experience and curiosity in your specific unique body is the basis of
-        all massages and treatments I do. And presence, always presence.
-    - icon: ""
+    - icon: ti-hand-open
       title: Sensitivity
       content: Especially for people who themselves have training and knowledge about
         the body and treatment, or a lot of experience receiving massages, it
