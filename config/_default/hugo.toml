@@ -93,7 +93,7 @@ link = "plugins/google-map/map.js"
 
 ############################# Default Parameters ##########################
 [params]
-logo = "/images/6 cropped50.webp"
+logo = "/images/6-cropped2.svg"
 # Meta data
 description = "Responsive Multipurpose Parallax Hugo Template"
 author = "Themefisher"
@@ -122,8 +122,8 @@ map_marker = "images/marker.png"
 
 ############################# social icons ##########################
 [[params.social]]
-icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #" #" #"
+icon = "ti-instagram" # themify icon pack : https://themify.me/themify-icons
+link = "https://www.instagram.com/carolinemassagem/" #" #" #" #" #"
 
 [[params.social]]
 icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
