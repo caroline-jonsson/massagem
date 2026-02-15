@@ -10,16 +10,16 @@ feature:
     tuned into all parts of our body. Sometimes we won’t notice our tension
     until someone else starts to release it.
   feature_item:
-    - title: Recovery
-      icon: ti-world
-      content: Helps muscles to recover and relax after exercise.
     - title: Relaxation
-      icon: ti-panel
+      icon: ti-face-smile
       content: Helps the body to relax and reduce stress through oxytocin release.
+    - title: Recovery
+      icon: ti-plug
+      content: Helps muscles to recover and relax after exercise.
     - title: Blood Circulation
       icon: ti-stats-up
       content: Helps to improve blood circulation.
     - title: Treatment
-      icon: ti-announcement
+      icon: ti-support
       content: Helps to ease certain pains and issues.
 
