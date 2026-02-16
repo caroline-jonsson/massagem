@@ -130,7 +130,7 @@ icon = "ti-google" # themify icon pack : https://themify.me/themify-icons
 link = "https://maps.app.goo.gl/HzPC8Xj9iYkMzHDy5?g_st=ic" #" #" #" #" #"
 
 [[params.social]]
-icon = "ti-whatsapp" # themify icon pack : https://themify.me/themify-icons
+icon = "ti-comment" # themify icon pack : https://themify.me/themify-icons
 link = "https://wa.me/message/K2LRXPUNEDHEH1" #" #" #" #" #"
 
 [[params.social]]
