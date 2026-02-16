@@ -133,19 +133,6 @@ link = "https://maps.app.goo.gl/HzPC8Xj9iYkMzHDy5?g_st=ic" #" #" #" #" #"
 icon = "ti-comment" # themify icon pack : https://themify.me/themify-icons
 link = "https://wa.me/message/K2LRXPUNEDHEH1" #" #" #" #" #"
 
-[[params.social]]
-icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #" #"
-
-[[params.social]]
-icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #" #"
-
-[[params.social]]
-icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
-link = "#" #" #" #"
-
-
 ################################ English Language ########################
 [Languages.en]
 languageName = "En"
